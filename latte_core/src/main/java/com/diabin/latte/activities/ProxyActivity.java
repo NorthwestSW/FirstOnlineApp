@@ -18,12 +18,12 @@ public abstract class ProxyActivity extends SupportActivity {
         super.onCreate(savedInstanceState);
     }
 
-    private void initContainer(Bundle saveInstanceState){
+    private void initContainer(Bundle saveInstanceState) {
         ContentFrameLayout container = new ContentFrameLayout(this);
         container.setId(R.id.delegate_container);
         setContentView(container);
-        if (saveInstanceState == null) {
-//            loadRootFragment(R.id.delegate_container,setRootDelegate());
+        if (saveInstanceState == null)    {
+            loadRootFragment(R.id.delegate_container, setRootDelegate());
         }
     }
 

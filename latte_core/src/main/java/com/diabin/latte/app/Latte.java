@@ -5,13 +5,14 @@ import android.content.Context;
 import java.util.HashMap;
 
 public final class Latte {
-    public static ConfigRator init(Context context){
+
+    public static Configurator init(Context context){
         getConfigrations().put(ConfigType.APPLICATION_CONTEXT.name(),context.getApplicationContext());
-        return ConfigRator.getInstance();
+        return Configurator.getInstance();
     }
 
-    private static HashMap<String,Object> getConfigrations(){
-        return ConfigRator.getInstance().getLatteConfigs();
+    public static HashMap<String,Object> getConfigrations(){
+        return Configurator.getInstance().getLatteConfigs();
     }
 
     public static  Context getApplication(){

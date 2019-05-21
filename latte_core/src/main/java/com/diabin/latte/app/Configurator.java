@@ -9,16 +9,16 @@ import java.util.HashMap;
 /**
  * 配置文件的存储或者获取
  */
-public class ConfigRator {
+public class Configurator {
     private static final HashMap<String, Object> LATTE_CONFIGS = new HashMap<>();
 
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
-    private ConfigRator() {
+    private Configurator() {
         LATTE_CONFIGS.put(ConfigType.CONFIG_READY.name(), false);
     }
 
     private static class Holder {
-        public static final ConfigRator INSTANCE = new ConfigRator();
+        public static final Configurator INSTANCE = new Configurator();
     }
 
     public final void configure() {
@@ -30,7 +30,7 @@ public class ConfigRator {
      * 线程安全的懒汉单例模式
      * @return
      */
-    public static ConfigRator getInstance() {
+    public static Configurator getInstance() {
         return Holder.INSTANCE;
     }
 
@@ -38,7 +38,7 @@ public class ConfigRator {
         return LATTE_CONFIGS;
     }
 
-    public final  ConfigRator withApiHost(String host){
+    public final Configurator withApiHost(String host){
         LATTE_CONFIGS.put(ConfigType.API_HOST.name(),host);
         return this;
     }
@@ -54,7 +54,7 @@ public class ConfigRator {
         return (T) LATTE_CONFIGS.get(key.name());
 
     }
-   public final  ConfigRator withIcon(IconFontDescriptor descriptor){
+   public final Configurator withIcon(IconFontDescriptor descriptor){
         ICONS.add(descriptor);
         return this;
    }
