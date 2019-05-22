@@ -2,6 +2,9 @@ package com.diabin.latte.net.callback;
 
 import android.os.Handler;
 
+
+import com.diabin.latte.app.ConfigKeys;
+import com.diabin.latte.app.Latte;
 import com.diabin.latte.net.RestCreator;
 import com.diabin.latte.ui.LatteLoader;
 import com.diabin.latte.ui.LoaderStyle;
@@ -10,13 +13,18 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RequestCallbacks implements Callback<String> {
+/**
+ * Created by 傅令杰 on 2017/4/2
+ */
+
+public final class RequestCallbacks implements Callback<String> {
+
     private final IRequest REQUEST;
     private final ISuccess SUCCESS;
     private final IFailure FAILURE;
     private final IError ERROR;
     private final LoaderStyle LOADER_STYLE;
-    private static final Handler HANDLER = new Handler();
+    private static final Handler HANDLER = Latte.getHandler();
 
     public RequestCallbacks(IRequest request, ISuccess success, IFailure failure, IError error, LoaderStyle style) {
         this.REQUEST = request;
@@ -56,6 +64,7 @@ public class RequestCallbacks implements Callback<String> {
     }
 
     private void onRequestFinish() {
+        final long delayed = Latte.getConfiguration(ConfigKeys.LOADER_DELAYED);
         if (LOADER_STYLE != null) {
             HANDLER.postDelayed(new Runnable() {
                 @Override
@@ -63,7 +72,7 @@ public class RequestCallbacks implements Callback<String> {
                     RestCreator.getParams().clear();
                     LatteLoader.stopLoading();
                 }
-            }, 1000);
+            }, delayed);
         }
     }
 }

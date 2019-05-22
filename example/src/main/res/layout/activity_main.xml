@@ -2,14 +2,26 @@
 <android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <com.joanzapata.iconify.widget.IconTextView
+   <!--<com.joanzapata.iconify.widget.IconTextView-->
+       <!--android:text="{fa-coffee}"-->
+       <!--android:id="@+id/icon_test"-->
+       <!--android:layout_width="wrap_content"-->
+       <!--android:layout_height="wrap_content"-->
+       <!--tools:ignore="MissingConstraints" />-->
+   <android.support.v7.widget.AppCompatButton
        android:text="{fa-coffee}"
        android:id="@+id/icon_test"
+       android:onClick="testAsscos"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       tools:ignore="MissingConstraints" />
-
+       />
+   <android.support.v7.widget.AppCompatTextView
+       android:id="@+id/testApp"
+       android:textSize="16sp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
 </android.support.v7.widget.LinearLayoutCompat>

@@ -1,8 +1,9 @@
 package com.diabin.latte.net;
 
 /**
- * 定义枚举类方便判断请求类型
+ * Created by 傅令杰 on 2017/4/2
  */
+
 enum HttpMethod {
     GET,
     POST,

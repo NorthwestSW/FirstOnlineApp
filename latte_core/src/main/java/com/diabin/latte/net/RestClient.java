@@ -2,11 +2,13 @@ package com.diabin.latte.net;
 
 import android.content.Context;
 
+
 import com.diabin.latte.net.callback.IError;
 import com.diabin.latte.net.callback.IFailure;
 import com.diabin.latte.net.callback.IRequest;
 import com.diabin.latte.net.callback.ISuccess;
 import com.diabin.latte.net.callback.RequestCallbacks;
+import com.diabin.latte.net.download.DownloadHandler;
 import com.diabin.latte.ui.LatteLoader;
 import com.diabin.latte.ui.LoaderStyle;
 
@@ -21,9 +23,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 /**
- * 通过建造者设计模式构建整个网络连接
+ * Created by 傅令杰 on 2017/4/2
  */
-public class RestClient {
+
+public final class RestClient {
 
     private static final WeakHashMap<String, Object> PARAMS = RestCreator.getParams();
     private final String URL;
@@ -90,15 +93,15 @@ public class RestClient {
             case POST:
                 call = service.post(URL, PARAMS);
                 break;
-//            case POST_RAW:
-//                call = service.postRaw(URL, BODY);
-//                break;
+            case POST_RAW:
+                call = service.postRaw(URL, BODY);
+                break;
             case PUT:
                 call = service.put(URL, PARAMS);
                 break;
-//            case PUT_RAW:
-//                call = service.putRaw(URL, BODY);
-//                break;
+            case PUT_RAW:
+                call = service.putRaw(URL, BODY);
+                break;
             case DELETE:
                 call = service.delete(URL, PARAMS);
                 break;
@@ -162,9 +165,9 @@ public class RestClient {
         request(HttpMethod.UPLOAD);
     }
 
-//    public final void download() {
-//        new DownloadHandler(URL, REQUEST, DOWNLOAD_DIR, EXTENSION, NAME,
-//                SUCCESS, FAILURE, ERROR)
-//                .handleDownload();
-//    }
+    public final void download() {
+        new DownloadHandler(URL, REQUEST, DOWNLOAD_DIR, EXTENSION, NAME,
+                SUCCESS, FAILURE, ERROR)
+                .handleDownload();
+    }
 }

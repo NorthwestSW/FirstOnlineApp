@@ -11,4 +11,9 @@ public class ExampleActivity extends ProxyActivity {
     public LatteDelegate setRootDelegate() {
         return new ExampleDelegate();
     }
+
+    @Override
+    public void post(Runnable runnable) {
+
+    }
 }

@@ -14,7 +14,11 @@ import java.util.WeakHashMap;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
-public class RestClientBuilder {
+/**
+ * Created by 傅令杰 on 2017/4/2
+ */
+
+public final class RestClientBuilder {
 
     private static final WeakHashMap<String, Object> PARAMS = RestCreator.getParams();
     private String mUrl = null;

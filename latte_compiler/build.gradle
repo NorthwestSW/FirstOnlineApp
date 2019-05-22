@@ -1,7 +1,15 @@
 apply plugin: 'java-library'
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    //Android上的SPI实现.这是一个注解处理器，是Google开发的，用来生成META-INF/services/javax.annotation.processing.Processor文件的。
+    compile 'com.google.auto.service:auto-service:1.0-rc3'
+    //动态生成java代码
+    compile 'com.squareup:javapoet:1.9.0'
+    compile 'com.google.auto:auto-common:0.8'
+
+    compile project(':latte_anntations')
 }
 
 sourceCompatibility = "7"
