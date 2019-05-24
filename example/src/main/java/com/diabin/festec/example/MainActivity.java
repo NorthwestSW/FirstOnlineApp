@@ -16,12 +16,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * 测试编译生成代码
-     *
-     * @param view
-     */
-    public void testAsscos(View view) {
 
-    }
 }

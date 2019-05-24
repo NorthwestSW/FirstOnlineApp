@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:paddingTop="50dp"
     tools:context=".MainActivity">
 
    <!--<com.joanzapata.iconify.widget.IconTextView-->
@@ -15,7 +16,6 @@
    <android.support.v7.widget.AppCompatButton
        android:text="{fa-coffee}"
        android:id="@+id/icon_test"
-       android:onClick="testAsscos"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        />

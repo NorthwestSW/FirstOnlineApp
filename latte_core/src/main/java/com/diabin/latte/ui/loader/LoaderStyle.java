@@ -1,4 +1,4 @@
-package com.diabin.latte.ui;
+package com.diabin.latte.ui.loader;
 
 @SuppressWarnings("unused")
 public enum LoaderStyle {

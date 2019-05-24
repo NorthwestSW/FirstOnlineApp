@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="camera_flow_layout">
+        <!--最多可显示的个数-->
+        <attr name="max_count" format="integer" />
+        <!--间距-->
+        <attr name="item_margin" format="integer" />
+        <!--每行显示多少个-->
+        <attr name="line_count" format="integer" />
+        <!--图片的大小-->
+        <attr name="icon_size" format="dimension" />
+    </declare-styleable>
+</resources>

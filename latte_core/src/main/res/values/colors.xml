@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorWrite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="popup_color">#7f000000</color>
+    <color name="color_808080">#808080</color>
+    <color name="gray">#DEDEDE</color>
+
+    <color name="colorToolBar">#0E3A28</color>
+    <color name="colorBackground">#EFF4F4</color>
+
+    <color name="colorBaseText">#333333</color>
+    <color name="colorGrayText">#666666</color>
+    <color name="colorHintText">#999999</color>
+    <color name="colorActiveText">#965d2d</color>
+    <color name="colorPriceText">#E71212</color>
+    <color name="colorIntegralText">#FF7637</color>
+    <color name="colorBaseButton">#0E3A28</color>
+    <color name="colorGrayButton">#DDDDDD</color>
+    <color name="colorTintButton">#68BD95</color>
+    <color name="colorHintLine">#EEEEEE</color>
+    <color name="colorHintLine30">#d1ebdf</color>
+    <color name="colorWalletText">#DCBA6D</color>
+
+    <color name="colcrOverlay">#66000000</color>
+    <color name="colorLucency">#00000000</color>
+    <color name="colorhelf">#ff000000</color>
+    <color name="colorhalf80">#80000000</color>
+
+
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+    <color name="color333">#333333</color>
+    <color name="color666">#666666</color>
+    <color name="color999">#999999</color>
+    <color name="colorBD">#BDBDBD</color>
+    <color name="colorHint">#BDBDBD</color>
+    <color name="colorC1">#C1C1C1</color>
+    <color name="colorNotice">#E71212</color>
+    <color name="tvRed">#ffd0021b</color>
+    <color name="colorF9FBFB">#FFF9FBFB</color>
+    <color name="colorF7">#F7F7F7</color>
+    <color name="colorEF">#EFEFEF</color>
+    <color name="colorF4">#fffffcf4</color>
+    <color name="colorEE">#EEEEEE</color>
+
+    <color name="colorf7">#F7f7f7</color>
+    <color name="colore5">#e5e5e5</color>
+
+    <color name="colorfaeac2">#fff7e2</color>
+    <color name="color_pup_0e2a28">#0E2A28</color>
+    <color name="colorDC">#DCBA6D</color>
+
+    <color name="default_shadow_color">#88757575</color>
+    <color name="default_fill_color">#ffffff</color>
+
+    <color name="colorTicket">#fff2a019</color>
+
+</resources>

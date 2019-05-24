@@ -1,5 +1,6 @@
 package com.diabin.latte.activities;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,9 @@ import me.yokeyword.fragmentation.ISupportActivity;
 import me.yokeyword.fragmentation.SupportActivityDelegate;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
+/**
+ * Created by 傅令杰 on 2017/4/2
+ */
 
 public abstract class ProxyActivity extends AppCompatActivity implements ISupportActivity {
 
@@ -28,7 +32,7 @@ public abstract class ProxyActivity extends AppCompatActivity implements ISuppor
     }
 
     private void initContainer(@Nullable Bundle savedInstanceState) {
-        final ContentFrameLayout container = new ContentFrameLayout(this);
+        @SuppressLint("RestrictedApi") final ContentFrameLayout container = new ContentFrameLayout(this);
         container.setId(R.id.delegate_container);
         setContentView(container);
         if (savedInstanceState == null) {

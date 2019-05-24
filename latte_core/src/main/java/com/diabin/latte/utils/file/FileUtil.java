@@ -15,7 +15,6 @@ import android.provider.MediaStore;
 import android.webkit.MimeTypeMap;
 import android.widget.TextView;
 
-
 import com.diabin.latte.app.Latte;
 
 import java.io.BufferedInputStream;
@@ -365,5 +364,19 @@ public final class FileUtil {
             }
         }
         return data;
+    }
+
+    public static File getFileByPath(String path) {
+        return isSpace(path) ? null : new File(path);
+    }
+
+    private static boolean isSpace(final String s) {
+        if (s == null) return true;
+        for (int i = 0, len = s.length(); i < len; ++i) {
+            if (!Character.isWhitespace(s.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
     }
 }
